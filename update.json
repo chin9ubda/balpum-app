@@ -1,0 +1,9 @@
+{
+  "schema": 1,
+  "android": {
+    "com.balpum.app.store": {
+      "minVersionCode": 0,
+      "message": ""
+    }
+  }
+}
