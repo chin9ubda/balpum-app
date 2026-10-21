@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'sha256-lb10wmDURX+/UY7vERrhYAAc7R1bZ3dzdBA9tSnf5os='; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="policy-version" content="1">
+<title>발품 개인정보처리방침</title>
+<style>
+:root {
+  --bg: #edecf2;
+  --surface: #f7f7fa;
+  --ink: #1a2238;
+  --ink-soft: #545b70;
+  --line: #d4d3dd;
+  --accent: #3b63c9;
+  --code-bg: #e3e2ea;
+  --warn-bg: #f3ece0;
+  --warn-line: #c9a86a;
+  --warn-ink: #5a4213;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #14182a;
+    --surface: #1c2236;
+    --ink: #e8eaf2;
+    --ink-soft: #a7adc2;
+    --line: #2f3650;
+    --accent: #8aa4e8;
+    --code-bg: #262d45;
+    --warn-bg: #2d2717;
+    --warn-line: #8a7238;
+    --warn-ink: #ecd9a8;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+a { color: var(--accent); }
+a:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+.wrap { max-width: 760px; margin: 0 auto; padding: 0 18px 64px; }
+header.top { padding: 48px 0 8px; }
+h1 { font-size: 28px; line-height: 1.3; margin: 0 0 20px; letter-spacing: -0.01em; }
+.draft {
+  margin: 0 0 20px;
+  padding: 12px 16px;
+  background: var(--warn-bg);
+  border-left: 4px solid var(--warn-line);
+  color: var(--warn-ink);
+  border-radius: 6px;
+  font-weight: 600;
+}
+.meta { display: grid; gap: 4px; margin: 0 0 20px; padding: 14px 16px; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; font-size: 15px; }
+.meta div { display: flex; gap: 12px; }
+.meta dt { flex: none; width: 5.5em; color: var(--ink-soft); }
+.meta dd { margin: 0; }
+#intro { color: var(--ink-soft); }
+section { margin-top: 28px; padding: 20px 22px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; }
+h2 { font-size: 20px; line-height: 1.4; margin: 0 0 12px; }
+h3 { font-size: 17px; line-height: 1.45; margin: 22px 0 8px; }
+p { margin: 0 0 12px; }
+ul { margin: 0 0 12px; padding-left: 1.3em; }
+li { margin: 4px 0; }
+li::marker { color: var(--ink-soft); }
+code {
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.88em;
+  padding: 1px 5px;
+  background: var(--code-bg);
+  border-radius: 4px;
+  word-break: break-all;
+}
+strong { font-weight: 700; }
+</style>
+</head>
+<body>
+<main class="wrap">
+<header class="top">
+<h1>발품 개인정보처리방침</h1>
+<dl class="meta">
+<div><dt>판</dt><dd id="policy-version">1</dd></div>
+<div><dt>시행일</dt><dd id="effective-date">2026-10-21</dd></div>
+<div><dt>게시 주소</dt><dd id="policy-url">https://chin9ubda.github.io/balpum-app/privacy/</dd></div>
+</dl>
+<p id="intro">발품(스토어 제목 "발품 - AI 브라우저", 이하 "앱")은 AI 에이전트가 브라우저를 조작하는 웹브라우저다. 이 방침은 앱이 기기에 저장하는 것,
+기기 밖으로 보내는 것과 그 상대, 사용자가 고를 수 있는 것을 설명한다.</p>
+</header>
+<section>
+<h2>1. 적용 범위와 앱 구성</h2>
+<p>Android 앱은 두 빌드로 나뉜다.</p>
+<ul>
+<li>personal 빌드(패키지 <code>com.balpum.app</code>) — 개인·지인 배포용이고, 광고가 없다.</li>
+<li>store 빌드(패키지 <code>com.balpum.app.store</code>) — Google Play 배포용이다. <strong>Google Play에 배포하는 store 빌드에는 광고가 없다</strong>(광고 SDK·광고 동의 화면·<code>AD_ID</code> 권한 없음).
+store 빌드에만 AI 데이터 전송 동의(3.0절), Google Play 인앱 업데이트·최소 버전 확인(3.5절), AI 답변 신고(8절)가 있다.</li>
+</ul>
+<p>이 방침은 두 빌드 모두에 적용하고, 3.0절·3.5절·8절은 store 빌드에만 해당한다.</p>
+</section>
+<section>
+<h2>2. 앱이 기기에 저장하는 것</h2>
+<p>앱이 저장하는 다음 데이터는 Android 앱 전용 저장소(다른 앱이 접근할 수 없는 영역)에 둔다. 사용자가 "받기"로 공용 다운로드 폴더에 저장한 파일만 예외다(아래 다운로드 항목).</p>
+<ul>
+<li><strong>대화·세션 기록</strong> — 내장 AI와의 대화 세션 기록을 기기에 저장한다.</li>
+<li><strong>자격증명 볼트</strong> — 사용자가 등록한 로그인 정보(별칭·아이디·비밀번호·대상 사이트의 https 주소)를 <code>vault.json</code>에 저장한다. 레코드는 AES-256-GCM으로 암호화되고, 암호화 키는 Android Keystore에 두어 기기 밖으로 추출할 수 없다. 볼트 사용에는 생체 인증 또는 기기 화면 잠금 인증이 요구되고, 화면 잠금이 설정되지 않은 기기에서는 볼트를 사용하지 않는다.</li>
+<li><strong>AI 공급자 설정·자격증명</strong> — 사용자가 설정한 AI 공급자의 OAuth 토큰과 API 키(OpenRouter 로그인으로 받은 키 포함)는 앱 전용 암호화 저장소에 저장되며, 채팅 프롬프트·응답·로그·설정 화면 어디에도 노출되지 않는다.</li>
+<li><strong>AI 데이터 전송 동의 기록(store 빌드)</strong> — 동의한 고지 판과 동의 시각을 기기에만 기록한다. 철회하면 지운다.</li>
+<li><strong>외부 API 키</strong> — 사용자가 등록한 공공데이터포털·네이버·카카오 API 키는 앱 전용 암호화 저장소에 저장한다. 저장 뒤에는 설정 화면에서 값을 다시 보여주지 않는다.</li>
+<li><strong>메모(세션 간 메모리)</strong> — 사용자가 승인한 참고 메모를 기기에 저장한다(최대 50개·전체 16KB). 저장은 사용자 승인 카드를 거친 텍스트만 이루어진다.</li>
+<li><strong>토큰 사용량 통계</strong> — 모델 호출마다 공급자가 알려 준 토큰 수를 숫자·날짜·공급자 종류·모델 이름·대화/턴 식별자 형태로 기기에 기록한다. 프롬프트·답변·URL·키는 기록하지 않는다.</li>
+<li><strong>다운로드·첨부 파일</strong> — 앱이 받는 파일은 앱 전용 저장소에 둔다. 공유 저장소·외부 앱으로 내보내는 것은 사용자 승인을 거친다. 설치·실행 파일처럼 허용 목록 밖 형식은 받을 때마다 확인 창을 띄우고, 사용자가 "받기"를 누른 파일만 기기의 <strong>공용 다운로드(Download) 폴더</strong>에 저장한다(Android 10 이상은 MediaStore, Android 9 이하는 그때 저장소 쓰기 권한을 묻는다). 공용 다운로드 폴더의 파일은 다른 앱과 파일 관리자가 볼 수 있다.</li>
+</ul>
+<p><strong>백업 차단</strong> — 앱은 Android 클라우드 백업과 기기 간 이전을 모두 차단한다(<code>allowBackup="false"</code> + 데이터 추출 규칙에서 전 도메인 제외). 세션·대화 기록과 암호화 설정(API 키·OAuth 토큰·볼트)은 클라우드 백업이나 기기 이전에 실리지 않는다.</p>
+<p><strong>요구 권한</strong> — 앱이 선언하는 권한과 용도는 아래와 같다. 위치·알림·저장소 쓰기 권한은 필요한 순간에 시스템 창으로 묻고, 거부하면 그 기능만 쓰지 못한다.</p>
+<ul>
+<li><code>INTERNET</code> — 웹 페이지, 사용자가 설정한 AI 공급자·외부 API와의 연결.</li>
+<li><code>ACCESS_FINE_LOCATION</code>·<code>ACCESS_COARSE_LOCATION</code> — 사이트가 <code>navigator.geolocation</code>으로 위치를 요청하고 사용자가 허용할 때만 그 사이트에 전달한다. 앱은 위치를 저장하거나 따로 보내지 않는다.</li>
+<li><code>POST_NOTIFICATIONS</code> — 작업 진행·예약 루틴 알림(Android 13 이상, 첫 작업 때 한 번 묻는다).</li>
+<li><code>FOREGROUND_SERVICE</code>·<code>FOREGROUND_SERVICE_DATA_SYNC</code>·<code>FOREGROUND_SERVICE_SPECIAL_USE</code> — 사용자가 시작한 AI 작업이 앱을 벗어나도 끝까지 돌도록, 작업하는 동안에만 켜는 포그라운드 서비스(진행 알림 표시).</li>
+<li><code>HIDE_OVERLAY_WINDOWS</code> — 앱 화면 위에 다른 앱의 오버레이 창이 덮이지 않게 한다(화면 가로채기 방어).</li>
+<li><code>WRITE_EXTERNAL_STORAGE</code> — Android 9 이하에서만, 사용자가 "받기"를 누른 파일을 공용 다운로드 폴더에 저장할 때 묻는다.</li>
+<li><code>RECEIVE_BOOT_COMPLETED</code> — 기기를 다시 켠 뒤 사용자가 만든 예약 루틴을 다시 예약한다.</li>
+<li><code>FOREGROUND_SERVICE_MEDIA_PLAYBACK</code> — personal 빌드에만 있다. 백그라운드 재생 설정을 켰을 때 페이지 미디어 재생을 이어 간다.</li>
+<li>라이브러리가 함께 넣는 권한 — <code>USE_BIOMETRIC</code>·<code>USE_FINGERPRINT</code>(자격증명 볼트의 생체 인증), <code>WAKE_LOCK</code>·<code>ACCESS_NETWORK_STATE</code>(작업 예약 라이브러리 WorkManager), 앱 전용 내부 수신 권한(<code>DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</code> — 다른 앱이 쓸 수 없다).</li>
+<li>앱은 카메라·마이크·연락처·통화 기록 권한과 <code>AD_ID</code> 권한을 요구하지 않는다.</li>
+</ul>
+</section>
+<section>
+<h2>3. 기기 밖으로 전송되는 것</h2>
+<p>앱 개발자는 사용자 데이터를 자동으로 받는 수집 서버를 운영하지 않는다(이 방침의 근거 자료인 저장소 코드·문서 기준). 개발자가 사용자에게서 받는 것은 사용자가 메일 앱에서 직접 보낸 메일 — AI 답변 신고 메일(8절)과 문의 메일(7절) — 뿐이고, 이 메일은 앱이 보내지 않는다. 앱이 하는 기기 밖 전송은 아래 경로(3.1~3.10, 3.7은 전송 없음)로 한정된다. 이와 별개로, 앱이 웹 페이지를 보여 주는 데 쓰는 Android 시스템 구성요소(WebView)와 Android OS는 Google 정책에 따라 자체 통신(예: 세이프 브라우징 확인, App Link 검증)을 할 수 있다.</p>
+<h3>3.0 AI 데이터 전송 동의 (store 빌드)</h3>
+<ul>
+<li>store 빌드는 처음 AI 기능을 쓰기 전에 무엇을 어디로 보내는지 알리는 고지를 보여 주고, 사용자가 "동의하고 계속"을 누른 뒤에만 AI 공급자로 요청을 보낸다. 동의하지 않으면 AI 공급자로 요청을 보내지 않는다.</li>
+<li>동의가 필요한 기능은 AI 채팅·대기열·예약 루틴·작업 재개, 모델 목록과 OpenRouter 공개 모델 카탈로그 조회(3.1절), OpenRouter 로그인(3.10절), 이미지 검색(3.8절)이다.</li>
+<li>설정의 "AI 데이터 전송"에서 언제든 철회할 수 있다. 철회하면 새 요청을 막고, 진행 중인 AI 작업과 OpenRouter 로그인 대기를 멈춘다. 철회 전에 이미 보낸 내용은 공급자 쪽에서 되돌릴 수 없다.</li>
+<li>고지는 AI 공급자로 보내는 내용(메시지·페이지 내용·도구 실행 결과·링크 주소·첨부 이미지·켜 둔 메모), 이미지 검색 때 승인한 이미지를 Google 렌즈로 올린다는 것, OpenRouter를 쓰면 OpenRouter와, OpenRouter가 요청을 넘기는 모델 제공사(모델을 만든 회사와 다를 수 있다)가 받는다는 것, 발품 개발자는 이 내용을 자동으로 받지 않는다는 것(개발자가 받는 것은 사용자가 메일 앱에서 직접 보낸 메일 — AI 답변 신고 메일(8절)과 문의 메일(7절) — 뿐이다)을 알린다.</li>
+<li>고지 문구가 바뀌면(무엇을 어디로 보내는지가 달라지면) 다시 동의를 받는다.</li>
+<li>personal 빌드와 데스크톱 앱에는 이 동의 단계가 없다.</li>
+</ul>
+<h3>3.1 사용자가 설정한 AI 공급자 (사용자 선택)</h3>
+<ul>
+<li>클라우드 AI 공급자(OpenRouter, 사용자가 입력한 OpenAI 호환 엔드포인트, personal 빌드의 Claude 구독)를 사용하면, 채팅 메시지와 함께 <strong>페이지 콘텐츠가 해당 공급자 API로 외부 전송된다.</strong> 도구 결과(추출된 본문·검색 결과 등)도 모델 컨텍스트로 전달된다. 페이지에서 추출한 링크의 URL(쿼리·경로 포함)도 모델에 전달될 수 있다.</li>
+<li><strong>OpenRouter</strong>를 사용하면 위 내용이 OpenRouter(<code>openrouter.ai</code>)를 거쳐 <strong>사용자가 고른 모델의 제공사</strong>로 전달된다. 어느 제공사로 가는지는 사용자가 고른 모델에 따라 정해지고, OpenRouter와 각 제공사의 개인정보처리방침을 따른다. OpenRouter의 처리는 OpenRouter 개인정보처리방침(https://openrouter.ai/privacy)과 서비스 약관(https://openrouter.ai/terms)을 따른다. 모델 제공사별 기록·보존 정책과, 학습에 쓰는 제공사로 보내지 않도록 고르는 방법은 OpenRouter 안내(https://openrouter.ai/docs/guides/privacy/provider-logging)에 있다.</li>
+<li>OpenRouter로 보내는 모델 호출 요청에는 앱 이름을 알리는 고정 값(<code>X-Title: balpum</code>, <code>HTTP-Referer: https://github.com/balpum</code>)이 함께 간다. 이 값에는 사용자를 알아볼 수 있는 정보가 없다.</li>
+<li><strong>무료 모델은 제공사가 입력(페이지 콘텐츠 포함)을 기록하거나 모델 학습 등에 사용할 수 있다.</strong> 앱은 카탈로그의 가격 표시로 무료 모델을 구분할 뿐 제공사의 데이터 사용을 통제하지 않는다. 민감한 페이지에는 무료 모델을 쓰지 않는다.</li>
+<li><strong>OpenRouter 공개 모델 카탈로그</strong> — 저장된 OpenRouter 설정 화면을 열면 OpenRouter의 공개 모델 카탈로그(<code>https://openrouter.ai/api/v1/models</code>)를 키 없이 불러온다. 요청에 대화·키·사용자 데이터를 싣지 않지만, OpenRouter에는 일반 웹 요청처럼 IP 주소 등의 접속 기록이 남을 수 있다. store 빌드는 AI 데이터 전송 동의(3.0절) 전에는 카탈로그를 불러오지 않는다.</li>
+<li>OpenRouter 로그인으로 받은 API 키와 사용자가 직접 입력한 키는 기기의 암호화 저장소에만 저장되고 OpenRouter 요청에만 사용된다. store 빌드에는 Claude 구독 로그인이 없다.</li>
+<li><strong>로컬 LLM(Ollama·LM Studio 등)을 사용하면 위 내용은 사용자가 정한 로컬 서버로만 가고, 인터넷의 AI 공급자로는 가지 않는다.</strong> 그 서버가 같은 네트워크의 다른 기기에 있으면 내용은 그 기기로 간다. 민감한 페이지는 로컬 LLM 사용을 권장한다.</li>
+<li>사용자가 직접 첨부한 이미지는 픽셀 내용이 설정한 공급자로 전송된다. 전송 전에 위치·기기·촬영자 같은 메타데이터를 제거하고 축소 재인코딩한다.</li>
+<li>메모리 기능이 켜져 있으면 저장된 메모 본문(최대 16KB)이 모델 호출마다 공급자에 전달될 수 있다. 이 사실은 앱 설정 화면에도 표시된다.</li>
+<li>프로바이더 주소는 저장 시 https 전부 또는 루프백 http만 허용되고, 요청 시에도 다시 검증된다. 앱 자체 HTTP 클라이언트는 리다이렉트를 따르지 않는다.</li>
+<li>공급자 자격증명(OAuth 토큰·API 키)은 요청 조립에만 사용되고, 도구 스키마·로그·브릿지 트래픽에 나타나지 않는다.</li>
+</ul>
+<h3>3.2 사용자가 설정한 외부 API (사용자 선택)</h3>
+<ul>
+<li>사용자가 설정 화면에서 켜거나 키를 넣은 연결기(환율·공공데이터포털·네이버 검색·카카오 로컬)와, https 공개 API 일반 조회 기능으로만 요청이 나간다. 키 없는 연결기는 AI가 사용하지 않는다.</li>
+<li>일반 조회는 쿠키·로그인 없이 https 공개 API 주소만 보내고, 내부망·IP 주소·http 주소는 조회하지 않는다. AI가 페이지를 읽은 뒤 새 주소를 조회하려 하면 사용자 확인 카드가 뜬다.</li>
+<li>API 키는 해당 제공자 요청에만 사용되고, AI·로그·브릿지 트래픽 어디에도 나타나지 않는다. AI는 사용자에게 키를 요구하지 않는다.</li>
+</ul>
+<h3>3.3 사용자가 방문하는 웹 사이트</h3>
+<p>일반 브라우저와 같이, 사용자가 연 사이트에는 해당 사이트가 받아야 할 요청이 간다. 이는 사이트 운영자가 받는 것이고 앱이 별도로 복제해 저장·전송하지 않는다.</p>
+<h3>3.4 광고 (해당 없음)</h3>
+<p>이 방침이 적용되는 빌드에는 광고가 없어, 광고 네트워크로 보내는 것이 없다(4절).</p>
+<h3>3.5 store 빌드의 업데이트 확인 (GitHub Pages · Google Play)</h3>
+<ul>
+<li>store 빌드는 앱을 시작할 때와 다시 열 때(6시간 간격, 업데이트가 필요한 상태에서는 30초 간격) 고정 주소
+<code>https://chin9ubda.github.io/balpum-app/update.json</code>에서 최소 지원 버전을 조회한다. 요청에는 사용자 데이터·식별자를 싣지 않지만,
+호스팅 서비스(GitHub Pages)에는 일반 웹 요청처럼 <strong>IP 주소·User-Agent 등의 접속 기록</strong>이 남을 수 있다.
+personal 빌드는 이 조회를 하지 않는다.
+GitHub은 GitHub Pages 방문자의 IP 주소를 보안 목적으로 기록·저장한다고 밝히고 있다. 기록의 보존 기간은 GitHub이 따로 공개하지 않으며, 수집 목적과
+법적 의무에 따라 정한다고 GitHub 일반 개인정보처리방침(https://docs.github.com/ko/site-policy/privacy-policies/github-general-privacy-statement)에
+적혀 있다. 이 기록은 GitHub이 처리하고, 개발자는 이 기록을 열람하지 않는다.</li>
+<li>업데이트가 필요하면 Google Play 인앱 업데이트(Google Play Core <code>app-update</code> 라이브러리)로 업데이트 화면을 띄우거나 Play 스토어 페이지를 연다.
+이 과정은 기기의 Google Play 앱이 처리하고, Google 개인정보처리방침(https://policies.google.com/privacy?hl=ko)과 Google Play 서비스
+약관(https://play.google.com/intl/ko/about/play-terms/index.html)을 따른다.</li>
+</ul>
+<h3>3.6 광고 차단 필터 갱신 (갱신을 켠 빌드만)</h3>
+<p>Google Play에 배포하는 현재 store 빌드와 personal 빌드는 광고 차단 필터를 앱에 들어 있는 목록으로만 쓰고, 필터를 내려받으려고 기기 밖으로
+요청하지 않는다. 필터 원격 갱신을 켠 빌드를 배포하게 되면, 그 전에 이 절에 내려받는 주소·주기·접속 기록 안내를 넣고 판을 올린다.</p>
+<h3>3.7 오픈소스 라이선스 화면 (전송 없음)</h3>
+<p>설정의 "오픈소스 라이선스"는 앱에 함께 들어 있는 고지 파일만 읽어 보여 주고, 이 화면 때문에 기기 밖으로 보내는 것은 없다. Android 앱은 앱 안의
+<code>oss-licenses/android.json</code>(앱 라이브러리)·<code>oss-licenses/web.json</code>(앱 화면)을 읽는다. 데스크톱 앱은 앱 안의 <code>desktop.json</code>을 읽고, Chromium 고지
+전문(앱 리소스 <code>licenses/LICENSES.chromium.html</code>)은 기기의 기본 프로그램으로 여는 로컬 파일이다.</p>
+<h3>3.8 이미지 검색 (Google 렌즈)</h3>
+<ul>
+<li>사용자가 이 대화에 직접 첨부한 이미지로 AI에게 이미지 검색을 시키면, 보내기 전에 매번 확인 카드(보낼 이미지의 썸네일·받는 곳)를 보여 주고 사용자가 승인한 때만 Google 렌즈(<code>lens.google.com</code>)로 이미지를 올린다.</li>
+<li>올리는 이미지는 위치 등 메타데이터를 지운 JPEG 사본이고, 파일 이름은 고정 이름(<code>image.jpg</code>)으로 바꾸며 쿠키를 싣지 않는다. 요청에는 일반 웹 요청처럼 IP 주소와 User-Agent(앱 HTTP 라이브러리의 기본값)가 함께 가고, 한국어 결과를 요청하는 언어 값(<code>hl=ko</code>)이 주소에 붙는다.</li>
+<li>검색 결과는 앱의 새 탭에서 Google 페이지로 열리고, 그다음은 3.3절과 같다. 앱에서 Google 계정에 로그인해 두었다면 검색이 그 계정 기록에 남을 수 있다. Google이 받은 이미지와 검색 기록의 처리는 Google 개인정보처리방침(https://policies.google.com/privacy?hl=ko)과 Google 서비스 약관(https://policies.google.com/terms?hl=ko)을 따른다.</li>
+<li>검색 엔진을 네이버로 골랐으면 이미지를 올리지 않는다(네이버 웹에는 사진 업로드 검색 진입점이 없다).</li>
+<li>store 빌드는 AI 데이터 전송 동의(3.0절) 뒤에만 이미지를 올린다.</li>
+</ul>
+<h3>3.9 음성 입력 · 답변 읽어 주기 (Android)</h3>
+<ul>
+<li>입력창의 음성 입력을 누르면, 앱은 기기에 설치된 음성 인식 앱(예: Google 앱)을 Android 표준 음성 인식 화면으로 연다. 소리를 듣고 글자로 바꾸는 일은 그 앱이 하고, 앱은 인식된 글자만 받는다.</li>
+<li>앱에는 마이크 권한이 없고, 앱이 소리를 녹음하거나 저장하지 않는다. 음성이 기기 밖(음성 인식 서비스 제공사)으로 가는지와 그 처리는 사용자가 쓰는 음성 인식 앱의 정책을 따른다.</li>
+<li>인식된 글자는 입력창에 채워 약 2초 보여 준 뒤 일반 메시지처럼 보낸다(그 사이 입력창을 건드리면 보내지 않는다). 보낸 글은 3.1절대로 AI 공급자에게 간다.</li>
+<li>답변 읽어 주기는 기기의 음성 합성(TTS) 엔진을 쓴다. 답변 읽어 주기를 쓰면 읽을 답변 글이 기기의 TTS 엔진으로 간다. 엔진이 온라인 음성 합성을 쓰면 그 글이 엔진 제공사로 갈 수 있고, 그 처리는 기기에서 고른 TTS 엔진의 정책을 따른다.</li>
+<li>음성 인식 앱과 TTS 엔진이 무엇인지는 기기 설정에서 확인하고 바꿀 수 있다.</li>
+</ul>
+<h3>3.10 OpenRouter 로그인 콜백 페이지 (Android)</h3>
+<ul>
+<li>Android 앱에서 OpenRouter로 로그인하면, OpenRouter 승인 화면에서 허용을 누른 뒤 브라우저가 <code>https://chin9ubda.github.io/oauth/openrouter/&lt;flavor&gt;</code>(<code>&lt;flavor&gt;</code>는 <code>personal</code> 또는 <code>store</code>)로 돌아온다. 이 주소는 개발자가 GitHub Pages에 올린 정적 안내 페이지다.</li>
+<li>브라우저가 앱을 바로 열면(App Link) 이 페이지로는 요청이 나가지 않는다.</li>
+<li>브라우저가 앱을 열지 않고 이 페이지를 불러오면, 그 요청 주소에 OpenRouter가 준 1회용 코드와 앱이 만든 확인값이 들어 있어 호스팅 서비스(GitHub Pages)의 접속 기록에 IP 주소·User-Agent와 함께 남을 수 있다(이 접속 기록의 처리는 3.5절의 GitHub Pages 접속 기록과 같다). 이 1회용 코드는 OpenRouter가 PKCE로 확인하므로 앱 안에만 있는 검증값 없이는 API 키로 바꿀 수 없고, 앱은 한 번만 받으며, 로그인을 시작한 지 5분이 지나면 받지 않는다.</li>
+<li>페이지는 아무것도 저장하거나 보내지 않는다. 먼저 주소에서 코드를 지우고, 앱으로 돌아가는 버튼을 만든 뒤, 코드를 화면에 보여 준다. 코드를 지우기 전에 브라우저가 이 주소를 방문 기록에 남길 수 있다.</li>
+<li>store 빌드는 AI 데이터 전송 동의(3.0절) 뒤에만 로그인을 시작한다. 데스크톱 앱은 이 페이지를 쓰지 않는다(기기 안 루프백 주소로 받는다).</li>
+</ul>
+</section>
+<section>
+<h2>4. 광고</h2>
+<ul>
+<li>이 방침이 적용되는 빌드(personal 빌드와 Google Play에 배포하는 store 빌드)에는 광고가 없다. 광고 SDK와 광고 동의 화면이 들어 있지 않고, 앱은 광고 ID를 쓰지 않는다(<code>AD_ID</code> 권한 없음).</li>
+<li>빌드 스크립트는 배포 산출물에 광고 클래스·<code>AD_ID</code> 권한·광고 설정이 없음을 검사한다.</li>
+<li>광고를 넣은 빌드를 배포하게 되면, 그 전에 이 방침에 광고 절을 넣고 판을 올린다.</li>
+</ul>
+</section>
+<section>
+<h2>5. 아동</h2>
+<p>이 앱은 AI 에이전트 조작형 브라우저로서 만 18세 이상 성인을 대상으로 하며(Google Play 대상 연령 18세 이상), 만 14세 미만 아동을 대상으로 하지 않는다.
+개발자는 만 14세 미만 아동의 개인정보를 알면서 처리하지 않는다. 만 14세 미만 아동이 신고·문의 메일을 보낸 사실을 알게 되면, 법정대리인의 동의가
+확인되지 않은 그 메일은 법정대리인이 연락하도록 요청하는 답장을 한 번 보낸 뒤 지체 없이 지운다.</p>
+</section>
+<section>
+<h2>6. 데이터 보존과 삭제</h2>
+<ul>
+<li>기기에 저장된 대화·메모·볼트·사용량 통계는 사용자가 앱 안에서 삭제할 수 있다. 앱을 삭제하면 앱 전용 저장소의 데이터가 함께 지워진다. 공용 다운로드 폴더에 저장한 파일은 앱을 삭제해도 남는다.</li>
+<li>앱은 클라우드 백업·기기 간 이전을 막고 개발자에게 데이터를 보내지 않으므로, 개발자가 보관하는 사용자 데이터는 사용자가 직접 보낸 신고·문의 메일(개발자 메일함)뿐이다. 신고 메일의 보존과 삭제는 8절, 문의 메일의 보존과 삭제는 7절을 따른다. 개발자는 신고 처리 현황을 받은 날·신고 사유·처리 분류·조치·처리를 마친 날·앱 버전·현재 설정 모델만으로 기록하고, 메일 주소·이름·답변 내용은 적지 않는다.</li>
+<li>사용자가 설정한 AI 공급자·OpenRouter·모델 제공사, Google(이미지 검색), 음성 인식 앱, 호스팅 서비스(GitHub Pages)가 받은 데이터의 보존과 삭제는 각 사업자의 정책을 따른다.</li>
+</ul>
+</section>
+<section>
+<h2>7. 문의</h2>
+<p>개인정보 처리에 관한 문의는 아래로 한다.</p>
+<ul>
+<li>이메일: <a href="mailto:cc.contact.help@gmail.com">cc.contact.help@gmail.com</a></li>
+<li>문의 메일은 답변을 마친 날부터 90일 동안 보관한 뒤 개발자 메일함과 휴지통에서 지운다.</li>
+</ul>
+</section>
+<section>
+<h2>8. AI 답변 신고 (store 빌드)</h2>
+<ul>
+<li>store 빌드는 AI 답변 말풍선마다 "답변 신고" 버튼을 둔다. 사유를 고르면 앱은 기기의 메일 앱을 열어 받는 사람(<code>cc.contact.help@gmail.com</code>)·제목·본문이 채워진 메일 작성 화면을 보여 준다. <strong>앱은 메일을 보내지 않는다</strong> — 사용자가 메일 앱에서 내용을 확인·수정한 뒤 직접 보내야 개발자에게 간다. 보내지 않고 닫으면 아무것도 가지 않는다. 메일 앱이 없으면 받는 주소를 보여 주고 복사할 수 있게 한다.</li>
+<li>채워지는 내용은 신고 사유(부정확한 정보·위험하거나 해로운 내용·혐오·차별 표현·성적인 내용·개인정보 노출·기타 중 하나), 현재 설정 모델, 앱 버전(버전 이름·빌드 번호·빌드 종류), 답변 일부(앞부분 최대 1,000자)다. 현재 설정 모델은 신고할 때 설정에 고른 모델이다 — 앱은 답변마다 어느 모델이 만들었는지 기록하지 않아, 답변 뒤에 모델을 바꿨다면 답변을 만든 모델과 다를 수 있다.</li>
+<li>보낸 메일에는 사용자가 메일 앱에 쓰는 계정의 메일 주소(메일 앱이 붙이는 보낸 사람 이름 포함)와 사용자가 더 적은 내용도 함께 간다.</li>
+<li>앱은 답변 일부를 넣기 전에 비밀로 보이는 내용(API 키·토큰·비밀번호·주민등록번호·외국인등록번호·카드번호 등)을 찾는다. 보낸 답변(최대 65,536자, UTF-16 단위) 전체에서 하나라도 찾으면 답변 본문을 넣지 않고 "[비밀 정보로 보이는 내용이 있어 답변 본문을 넣지 않았습니다]"만 넣는다(사유·모델·앱 버전은 그대로). 찾지 못하면 보이지 않는 문자를 지우고 남은 키·값 모양의 비밀 표기를 가린 뒤 앞부분만 넣는다. 모델 이름도 같은 규칙을 거쳐, 걸리면 "(표시 생략)"으로 넣는다.</li>
+<li>이 판정은 놓치지 않도록 넓게 잡아서, 긴 링크 주소나 모델 이름처럼 비밀이 아닌 글에도 걸려 답변 본문이 빠질 수 있다. 그때는 메일 앱에서 직접 내용을 적어 보낼 수 있다. 거꾸로 자동 판정이라 모든 비밀을 찾지는 못하니(키워드 없이 적힌 값, 공백으로 쪼갠 값 등), 보내기 전에 메일 앱에서 본문을 꼭 확인해야 한다. 답변에 있는 이름·이메일 주소·전화번호·주소·링크 주소(쿼리 포함) 같은 다른 개인정보와 답변에 옮겨진 페이지 내용은 지우지 않으니, 보내기 전에 메일 앱에서 확인해 지울 수 있다.</li>
+<li>신고는 AI 데이터 전송 동의(3.0절)와 무관하다 — 동의를 철회한 상태에서도 쓸 수 있고, 신고 메일은 AI 공급자로 가지 않는다. personal 빌드와 데스크톱 앱에는 신고 버튼이 없다.</li>
+<li>개발자는 받은 신고를 AI 답변 문제 확인과 그에 따른 조치(안내 문구·기본 설정 개선, 앱 오류 수정)에만 쓴다. 이 처리는 사용자가 보낸 신고에 응하기 위한 것이고(「개인정보 보호법」 제15조제1항제4호), 처리하는 항목은 보낸 사람 메일 주소·이름과 메일 본문이다. 개발자는 받은 날부터 14일 안에 신고를 확인하고, 필요하면 보낸 주소로 답장한다.</li>
+<li>신고 메일은 같은 답변에 대한 재신고 대조와 답장 후속 처리를 위해 처리를 마친 날부터 90일 동안 보관한 뒤 개발자 메일함과 휴지통에서 지운다. 사유별 건수 같은 월간 집계는 메일 주소·이름·답변 내용 없이 남긴다.</li>
+<li>신고나 문의를 보낸 사람은 언제든 7절 주소로 자기 메일의 열람·정정·처리 정지나 삭제를 요청할 수 있고, 개발자는 요청을 받은 날부터 10일 안에 처리하고 결과를 알린다.</li>
+<li>신고 메일은 개발자가 쓰는 메일 서비스(Gmail — Google)와 사용자가 쓰는 메일 서비스를 거쳐 보관된다. 그 보관과 처리는 각 메일 서비스 사업자의 정책도 따른다. 개발자 메일함의 국외 보관은 9절에 적는다.</li>
+</ul>
+</section>
+<section>
+<h2>9. 국외 사업자와 국외 이전</h2>
+<p><strong>(1) 개발자가 처리하는 개인정보의 국외 보관</strong> — 사용자가 보낸 신고·문의 메일은 개발자가 쓰는 메일 서비스(Gmail)에 보관된다.</p>
+<ul>
+<li>이전 근거: 「개인정보 보호법」 제28조의8제1항제3호(정보주체와의 계약 체결·이행에 필요한 보관 — 같은 조 제2항의 사항을 이 방침에 공개)</li>
+<li>이전 항목: 보낸 사람 메일 주소·이름, 메일 본문(신고 메일은 신고 사유·현재 설정 모델·앱 버전·답변 일부, 그리고 사용자가 더 적은 내용)</li>
+<li>이전 국가·시기·방법: Google LLC의 설비가 있는 국가(미국 등), 사용자가 메일을 보낼 때, 메일 전송</li>
+<li>이전받는 자: Google LLC(개인정보 문의 양식: https://support.google.com/policies/contact/general_privacy_form)</li>
+<li>이용 목적·보유 기간: 받은 메일의 보관 — 신고 메일은 8절의 보존 기간(처리를 마친 날부터 90일)까지, 문의 메일은 7절의 보존 기간(답변을 마친 날부터 90일)까지</li>
+<li>거부 방법·효과: 신고·문의 메일을 보내지 않으면 이전되지 않는다. 그 경우 신고·문의를 할 수 없다.</li>
+</ul>
+<p><strong>(2) 앱이 기기에서 국외 사업자로 직접 보내는 것</strong> — 3.1·3.8절(사용자가 고른 AI 공급자·기능)과 3.5·3.10절(앱이 쓰는 Google Play·GitHub Pages)의
+전송은 앱이 기기에서 해당 사업자로 직접 보내며, 개발자는 이 데이터를 받거나 그 사업자에게 넘기지 않는다. 받는 사업자는 OpenRouter, Inc.(미국)와 사용자가 고른 모델의 제공사, Google LLC(미국),
+GitHub, Inc.(미국)이고, 각 사업자의 개인정보처리방침이 적용된다.</p>
+</section>
+</main>
+</body>
+</html>
